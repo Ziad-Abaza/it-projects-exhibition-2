@@ -767,6 +767,10 @@ ol {
   font-weight: 300px;
   margin-bottom: 12px;
 }
+.team__item__text .team__item__social a i {
+  color: #ffffff;
+  font-size: 24px;
+}
 .team__item__text .team__item__social a {
   color: #ffffff;
   display: inline-block;
