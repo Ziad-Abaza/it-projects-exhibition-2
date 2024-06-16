@@ -163,18 +163,31 @@
     $('.video-popup').magnificPopup({
         type: 'iframe'
     });
-
     /*------------------
         Counter
     --------------------*/
-    $('.counter_num').each(function () {
-        $(this).prop('Counter', 0).animate({
-            Counter: $(this).text()
-        }, {
-            duration: 4000,
-            easing: 'swing',
-            step: function (now) {
-                $(this).text(Math.ceil(now));
+    $(document).ready(function () {
+        var hasAnimated = false;
+        $(window).on('scroll', function () {
+            var counterElement = $('.counter_num');
+            var scrollTop = $(window).scrollTop();
+            var elementOffset = counterElement.offset().top;
+            var windowHeight = $(window).height();
+
+            if (!hasAnimated && scrollTop + windowHeight > elementOffset) {
+                hasAnimated = true;
+
+                counterElement.each(function () {
+                    $(this).prop('Counter', 0).animate({
+                        Counter: $(this).text()
+                    }, {
+                        duration: 4000,
+                        easing: 'swing',
+                        step: function (now) {
+                            $(this).text(Math.ceil(now));
+                        }
+                    });
+                });
             }
         });
     });
