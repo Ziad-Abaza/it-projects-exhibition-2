@@ -2185,6 +2185,8 @@ color: #6F42C1;
 
   .about__pic__item {
     margin-right: 0;
+    background-size: contain !important;
+    height: 180px !important;
   }
 
   .blog__details__quote {
