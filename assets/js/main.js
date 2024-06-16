@@ -36,6 +36,9 @@
     --------------------*/
     $('.set-bg').each(function () {
         var bg = $(this).data('setbg');
+        if ($(this).is('img')) {
+            $(this).attr('loading', 'lazy');
+        }
         $(this).css('background-image', 'url(' + bg + ')');
     });
 
@@ -193,3 +196,15 @@
     });
 
 })(jQuery);
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var redirects = {
+        "Projects.html": "cooming.html"
+    };
+    
+    var path = window.location.pathname.split("/").pop();
+    if (redirects[path]) {
+        window.location.replace(redirects[path]);
+    }
+});
