@@ -1,7 +1,7 @@
 RewriteEngine On
 
 # قاعدة لإعادة توجيه البحث عن Projects.html إلى cooming.html
-RewriteRule ^Projects\.html$ cooming.html [L]
+# RewriteRule ^Projects\.html$ cooming.html [L]
 
 # قاعدة لتحويل الطلبات إلى ملفات HTML إذا لم تكن الملفات موجودة
 RewriteCond %{REQUEST_FILENAME} !-f
