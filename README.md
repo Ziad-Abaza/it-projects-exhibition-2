@@ -1,7 +1,7 @@
 
 # IT Projects Exhibition
 
-![IT Projects Exhibition](https://ziad-abaza.github.io/it-projects-exhibition-2/assets/images/logo.png)
+![IT Projects Exhibition](https://github.com/Ziad-Abaza/Portfolio/blob/main/images/project/event-2.jpeg)
 
 ## Overview
 
